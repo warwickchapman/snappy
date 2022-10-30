@@ -25,7 +25,7 @@ $ composer require knplabs/knp-snappy
 
 ## Usage
 
-### Initialization
+### Initialization for PDF
 ```php
 <?php
 
@@ -38,6 +38,17 @@ $snappy = new Pdf('/usr/local/bin/wkhtmltopdf');
 // or you can do it in two steps
 $snappy = new Pdf();
 $snappy->setBinary('/usr/local/bin/wkhtmltopdf');
+```
+
+### Initialization for Image
+```php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Knp\Snappy\Image;
+
+$snappy = new Image('/usr/local/bin/wkhtmltoimage');
 ```
 
 ### Display the pdf in the browser
